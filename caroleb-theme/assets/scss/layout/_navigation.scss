@@ -7,6 +7,7 @@
 .main-navigation {
 	margin-top: 4%;
 	position: relative;
+	margin-bottom: 2rem;
 	.menu-toggle {
 		@include button-reset;
 		display: block;

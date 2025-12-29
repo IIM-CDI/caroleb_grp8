@@ -1,9 +1,11 @@
 @use "../abstracts" as *;
 
-.h1 {
-	display: flex;
-	justify-content: center;
-	margin: 1rem;
+.media-intro {
+	margin-left: 5rem;
+	margin-top: 3rem;
+	.media-text {
+		font-size: 1.5rem;
+	}
 }
 
 .media-wrapper {
@@ -11,6 +13,7 @@
 	grid-template-columns: repeat(5, 1fr);
 	grid-auto-rows: minmax(100px, auto);
 	justify-items: center;
+	margin-top: 3rem;
 
 	.wp-block-image {
 		img {

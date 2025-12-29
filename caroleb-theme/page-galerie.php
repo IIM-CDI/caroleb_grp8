@@ -58,7 +58,7 @@ get_header();
                 <?php endwhile; ?>
             </ul>
 
-            <div class="pagination">
+            <div class="galerie-pagination">
                 <?php
                 echo paginate_links(array(
                     'total' => $oeuvre_query->max_num_pages
