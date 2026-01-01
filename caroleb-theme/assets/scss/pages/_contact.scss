@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.contact-intro {
+	margin-left: 5rem;
+	margin-top: 3rem;
+	.contact-text {
+		font-size: 1.5rem;
+	}
+}

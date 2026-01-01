@@ -7,6 +7,9 @@ get_header();
         <h1>
             <?php the_title(); ?>
         </h1>
+        <p class="contact-text">
+            text
+        </p>
     </section>
     <?php
     the_content();

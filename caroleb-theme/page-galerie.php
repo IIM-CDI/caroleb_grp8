@@ -3,7 +3,14 @@ get_header();
 ?>
 
 <main id="main-content" class="site-main">
-    <h1 class="galerie-h1"><?php the_title(); ?> </h1>
+    <section class="galerie-intro">
+        <h1>
+            <?php the_title(); ?>
+        </h1>
+        <p class="galerie-text">
+            text
+        </p>
+    </section>
 
     <nav class="galerie-nav">
         <?php
