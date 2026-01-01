@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main id="main-content" class="site-main">
-    <h1 class="h1"><?php the_title(); ?> </h1>
+    <h1 class="galerie-h1"><?php the_title(); ?> </h1>
 
     <nav class="galerie-nav">
         <?php
@@ -26,8 +26,6 @@ get_header();
 
     <section>
         <?php
-
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
         $oeuvre_query = new WP_Query(array(
             'post_type' => 'oeuvre',
@@ -68,9 +66,7 @@ get_header();
 
             <?php wp_reset_postdata(); ?>
         <?php endif; ?>
-
     </section>
-
 </main>
 
 <?php

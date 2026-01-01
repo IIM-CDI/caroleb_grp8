@@ -2,9 +2,11 @@
 get_header();
 ?>
 
-<main>
+<main id="main-content" class="site-main">
     <section class="media-intro">
-        <h1 class="media-h1"><?php the_title(); ?> </h1>
+        <h1>
+            <?php the_title(); ?>
+        </h1>
         <p class="media-text">
             Chaque logo raconte une histoire,
             <br>
