@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+.pochoirs-nav {
+	@include nav;
+	.pochoirs-nav-list {
+		@include nav-list;
+		.pochoirs-list-individual {
+			@include list-individual;
+			.pochoirs-a {
+				@include list-a;
+			}
+			.pochoirs-a:hover {
+				@include list-a-hover;
+			}
+		}
+	}
+}
+.pochoirs-wrapper {
+	@include wrapper;
+	.pochoirs-items {
+		@include wrapper-items;
+		.pochoirs-item-title {
+			@include item-title;
+		}
+	}
+}
+.pochoirs-pagination {
+	@include pagination;
+	.current {
+		font-size: 3rem;
+	}
+	.page-numbers {
+		text-decoration: none;
+	}
+}
+.pochoirs-p {
+	@include empty;
+}

@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+.collection-privee-nav {
+	@include nav;
+	.collection-privee-nav-list {
+		@include nav-list;
+		.collection-privee-list-individual {
+			@include list-individual;
+			.collection-privee-a {
+				@include list-a;
+			}
+			.collection-privee-a:hover {
+				@include list-a-hover;
+			}
+		}
+	}
+}
+.collection-privee-wrapper {
+	@include wrapper;
+	.collection-privee-items {
+		@include wrapper-items;
+		.collection-privee-item-title {
+			@include item-title;
+		}
+	}
+}
+.collection-privee-pagination {
+	@include pagination;
+	.current {
+		font-size: 3rem;
+	}
+	.page-numbers {
+		text-decoration: none;
+	}
+}
+.collection-privee-p {
+	@include empty;
+}

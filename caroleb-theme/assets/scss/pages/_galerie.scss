@@ -1,58 +1,48 @@
 @use "../abstracts" as *;
-
 .galerie-intro {
-	margin-left: 5rem;
-	margin-top: 3rem;
+	@include intro;
 	.galerie-text {
 		font-size: 1.5rem;
 	}
 }
-
 .galerie-nav {
-	display: flex;
-	justify-content: center;
-	.nav-list {
-		display: flex;
-		list-style: none;
-		.list-individual {
-			margin: 0.5rem;
-			.list-a {
-				font-size: larger;
-				text-decoration: none;
-				color: #c4c3c3;
-				transition: 0.5s;
+	@include nav;
+	.galerie-nav-list {
+		@include nav-list;
+		.galerie-button {
+			@include bouton-red;
+			width: fit-content;
+			background-color: color("bouton-red");
+			&:hover,
+			&:focus {
+				background-color: inherit;
 			}
-			.list-a:hover {
-				color: #000000;
-				transition: 0.5s;
+			.galerie-a {
+				@include list-a;
+			}
+			.galerie-a:hover {
+				@include list-a-hover;
 			}
 		}
 	}
 }
-
 .galerie-wrapper {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	justify-items: center;
-	margin-top: 1rem;
+	@include wrapper;
 	.galerie-items {
-		list-style: none;
+		@include wrapper-items;
+		.galerie-item-title {
+			@include item-title;
+		}
 	}
 }
-
 .galerie-pagination {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	margin-top: 2rem;
-	font-size: 1.5rem;
-	align-items: center;
-
+	@include pagination;
 	.current {
+		color: #9d1b2e !important;
 		font-size: 3rem;
 	}
-
 	.page-numbers {
 		text-decoration: none;
+		color: black;
 	}
 }

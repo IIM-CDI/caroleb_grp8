@@ -7,13 +7,16 @@ get_header();
         <h1>
             <?php the_title(); ?>
         </h1>
-        <p class="contact-text">
+        <!-- <p class="contact-text">
             text
-        </p>
+        </p> -->
     </section>
-    <?php
-    the_content();
-    ?>
+
+    <section class="contact-content">
+        <?php
+        the_content();
+        ?>
+    </section>
 </main>
 
 <?php

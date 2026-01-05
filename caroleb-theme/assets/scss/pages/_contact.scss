@@ -1,9 +1,17 @@
 @use "../abstracts" as *;
-
 .contact-intro {
-	margin-left: 5rem;
-	margin-top: 3rem;
+	@include intro;
 	.contact-text {
 		font-size: 1.5rem;
+	}
+}
+.contact-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+	align-items: center;
+
+	.happyforms-flex {
+		max-width: 90%;
 	}
 }

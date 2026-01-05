@@ -145,12 +145,10 @@
 // Link styles
 // -----------------------------------------------------------------------------
 @mixin link-reset {
-	color: inherit;
 	text-decoration: none;
 
 	&:hover,
 	&:focus {
-		color: inherit;
 		text-decoration: none;
 	}
 }
@@ -167,6 +165,80 @@
 	&:hover,
 	&:focus {
 		background-color: color("bouton-red");
-		color: white;
+		color: rgb(255, 255, 255);
 	}
+}
+
+// intro
+
+@mixin intro {
+	margin-left: 5rem;
+	margin-top: 3rem;
+}
+
+// galerie
+
+// oeuvres
+@mixin wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+@mixin wrapper-items {
+	list-style: none;
+	margin: 1rem;
+}
+
+@mixin item-title {
+	margin-top: 1rem;
+	font-size: 1.3rem;
+}
+
+// nav
+@mixin nav {
+	display: flex;
+	justify-content: center;
+	margin: 1rem;
+}
+
+@mixin nav-list {
+	display: flex;
+	list-style: none;
+	gap: 2rem;
+}
+
+@mixin list-individual {
+	margin: 0.5rem;
+}
+
+@mixin list-a {
+	font-size: larger;
+	text-decoration: none;
+	color: #ffffff;
+	transition: 0.5s;
+}
+
+@mixin list-a-hover {
+	color: #000000;
+	transition: 0.5s;
+}
+
+// pagination
+@mixin pagination {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: 2rem;
+	font-size: 1.5rem;
+	align-items: center;
+}
+
+// si pas d'oeuvre
+
+@mixin empty {
+	display: flex;
+	justify-content: center;
 }

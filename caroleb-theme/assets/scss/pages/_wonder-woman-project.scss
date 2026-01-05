@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+.wonder-woman-nav {
+	@include nav;
+	.wonder-woman-nav-list {
+		@include nav-list;
+		.wonder-woman-list-individual {
+			@include list-individual;
+			.wonder-woman-a {
+				@include list-a;
+			}
+			.wonder-woman-a:hover {
+				@include list-a-hover;
+			}
+		}
+	}
+}
+.wonder-woman-wrapper {
+	@include wrapper;
+	.wonder-woman-items {
+		@include wrapper-items;
+		.wonder-woman-item-title {
+			@include item-title;
+		}
+	}
+}
+.wonder-woman-pagination {
+	@include pagination;
+	.current {
+		font-size: 3rem;
+	}
+	.page-numbers {
+		text-decoration: none;
+	}
+}
+.wonder-woman-p {
+	@include empty;
+}

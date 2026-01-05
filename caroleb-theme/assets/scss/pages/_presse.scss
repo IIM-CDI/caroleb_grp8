@@ -1,13 +1,16 @@
 @use "../abstracts" as *;
-
 .media-intro {
-	margin-left: 5rem;
-	margin-top: 3rem;
+	@include intro;
 	.media-text {
 		font-size: 1.5rem;
 	}
 }
-
+// .body .is-layout-grid {
+// 	display: grid;
+// 	align-items: center;
+// 	margin: 4rem;
+// 	gap: 3rem;
+// }
 .media-wrapper {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
