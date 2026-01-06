@@ -1,4 +1,8 @@
 @use "../abstracts" as *;
+.galerie {
+	// section 1
+	background-color: #fff8fa;
+}
 .galerie-intro {
 	@include intro;
 }

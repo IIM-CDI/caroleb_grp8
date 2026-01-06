@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
 <main>
-
-
     <section class="post1">
         <?php
         $query = new WP_Query(array(
@@ -32,7 +30,7 @@
         if ($query->have_posts()):
             while ($query->have_posts()):
                 $query->the_post();
-                
+
                 the_content();
             endwhile;
         endif;
@@ -43,7 +41,7 @@
 
     <section class="post3">
 
-    <?php
+        <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
             'p' => 254
@@ -53,7 +51,7 @@
             while ($query->have_posts()):
                 $query->the_post();
                 the_title('<h2>', '</h2>');
-                
+
             endwhile;
         endif;
 
@@ -88,14 +86,14 @@
                         <?php if ($img2)
                             echo wp_get_attachment_image($img2, 'large'); ?>
                     </div>
-                    
+
                 </div>
                 <?php if ($img3)
-                        echo wp_get_attachment_image($img3, 'large'); ?>
+                    echo wp_get_attachment_image($img3, 'large'); ?>
 
             </div>
         </div>
-            <?php
+        <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
             'p' => 254
@@ -105,15 +103,15 @@
             while ($query->have_posts()):
                 $query->the_post();
                 the_content();
-                
+
             endwhile;
         endif;
 
         wp_reset_postdata();
         ?>
     </section>
-   <section class="post4">
-                <?php
+    <section class="post4">
+        <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
             'p' => 282
@@ -123,14 +121,14 @@
             while ($query->have_posts()):
                 $query->the_post();
                 the_title('<h2 class="presse">', '</h2>');
-                
+
             endwhile;
         endif;
 
         wp_reset_postdata();
         ?>
-    <?php echo do_shortcode('[metaslider id="266"]'); ?>
-                <?php
+        <?php echo do_shortcode('[metaslider id="404"]'); ?>
+        <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
             'p' => 282
@@ -140,13 +138,13 @@
             while ($query->have_posts()):
                 $query->the_post();
                 the_content();
-                
+
             endwhile;
         endif;
 
         wp_reset_postdata();
         ?>
-</section>
+    </section>
 
 </main>
 

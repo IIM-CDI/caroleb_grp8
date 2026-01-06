@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up until <main>
  *
- * @package WP_B2
+ * @package Carole B
  * @since 1.0.0
  */
 

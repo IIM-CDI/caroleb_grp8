@@ -1,25 +1,17 @@
-// =============================================================================
-// Header
-// =============================================================================
-
 @use "../abstracts" as *;
-
 .site-header {
 	padding: spacing("lg") 0;
 	background-color: color("primary");
-	border-bottom: 1px solid color("border");
-
+	// border-bottom: 1px solid color("border");
 	.container {
 		display: flex;
 		flex-direction: column;
-
 		.main-navigation {
 			display: flex;
 			justify-content: center;
 		}
 	}
 }
-
 .site-branding {
 	flex: 0 0 auto;
 	display: flex;
@@ -27,7 +19,6 @@
 	.site-title {
 		margin: 0;
 		font-size: font-size("h3");
-
 		a {
 			@include link-reset;
 			color: color("primary");

@@ -2,15 +2,15 @@
 // Single Post
 // =============================================================================
 
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .single {
 	.post-navigation {
-		margin-top: spacing('xl');
-		padding-top: spacing('xl');
-		border-top: 1px solid color('border');
+		margin-top: spacing("xl");
+		padding-top: spacing("xl");
+		border-top: 1px solid color("border");
 		display: grid;
-		gap: spacing('md');
+		gap: spacing("md");
 
 		@include media-breakpoint-up(sm) {
 			grid-template-columns: 1fr 1fr;
@@ -18,14 +18,14 @@
 
 		.nav-subtitle {
 			display: block;
-			font-size: font-size('small');
-			color: color('text-light');
-			margin-bottom: spacing('xs');
+			font-size: font-size("small");
+			color: color("text-light");
+			margin-bottom: spacing("xs");
 		}
 
 		.nav-title {
 			display: block;
-			font-weight: font-weight('medium');
+			font-weight: font-weight("medium");
 		}
 	}
 }

@@ -1,4 +1,8 @@
 @use "../abstracts" as *;
+.collection-privee {
+	// section 1
+	background-color: #fff8fa;
+}
 .collection-privee-intro {
 	@include intro;
 }

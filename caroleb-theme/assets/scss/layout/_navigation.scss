@@ -16,14 +16,12 @@
 		@include media-breakpoint-up(md) {
 			display: none;
 		}
-
 		.menu-toggle-icon {
 			display: block;
 			width: 24px;
 			height: 2px;
 			background-color: color("text");
 			position: relative;
-
 			&::before,
 			&::after {
 				content: "";
@@ -33,17 +31,14 @@
 				height: 2px;
 				background-color: color("text");
 			}
-
 			&::before {
 				top: -8px;
 			}
-
 			&::after {
 				bottom: -8px;
 			}
 		}
 	}
-
 	.primary-menu-container {
 		display: none;
 
@@ -51,7 +46,6 @@
 			display: block;
 		}
 	}
-
 	.primary-menu {
 		display: flex;
 		gap: spacing("md");

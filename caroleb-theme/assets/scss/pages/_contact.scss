@@ -1,4 +1,8 @@
 @use "../abstracts" as *;
+.contact {
+	// section 1
+	background-color: #fff8fa;
+}
 .contact-intro {
 	@include intro;
 	.contact-text {

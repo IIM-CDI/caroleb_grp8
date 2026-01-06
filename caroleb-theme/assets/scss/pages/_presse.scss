@@ -1,4 +1,8 @@
 @use "../abstracts" as *;
+.presse {
+	// section 1
+	background-color: #fff8fa;
+}
 .media-intro {
 	@include intro;
 	.media-text {
