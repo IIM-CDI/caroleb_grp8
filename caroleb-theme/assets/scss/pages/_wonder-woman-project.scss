@@ -4,8 +4,16 @@
 }
 .wonder-woman-nav {
 	@include nav;
+	@media (min-width: 600px) {
+		justify-content: center;
+	}
 	.wonder-woman-nav-list {
 		@include nav-list;
+		@media (min-width: 600px) {
+			flex-direction: row;
+			font-size: larger;
+			gap: 2rem;
+		}
 		.wonder-woman-button {
 			@include bouton-red;
 			width: fit-content;
@@ -25,6 +33,9 @@
 }
 .wonder-woman-wrapper {
 	@include wrapper;
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
 	.wonder-woman-items {
 		@include wrapper-items;
 		.wonder-woman-item-title {

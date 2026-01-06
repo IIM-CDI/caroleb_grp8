@@ -4,8 +4,16 @@
 }
 .pochoirs-nav {
 	@include nav;
+	@media (min-width: 600px) {
+		justify-content: center;
+	}
 	.pochoirs-nav-list {
 		@include nav-list;
+		@media (min-width: 600px) {
+			flex-direction: row;
+			font-size: larger;
+			gap: 2rem;
+		}
 		.pochoirs-button {
 			@include bouton-red;
 			width: fit-content;
@@ -25,6 +33,9 @@
 }
 .pochoirs-wrapper {
 	@include wrapper;
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
 	.pochoirs-items {
 		@include wrapper-items;
 		.pochoirs-item-title {

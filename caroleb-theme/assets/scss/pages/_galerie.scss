@@ -8,8 +8,16 @@
 }
 .galerie-nav {
 	@include nav;
+	@media (min-width: 600px) {
+		justify-content: center;
+	}
 	.galerie-nav-list {
 		@include nav-list;
+		@media (min-width: 600px) {
+			flex-direction: row;
+			font-size: larger;
+			gap: 2rem;
+		}
 		.galerie-button {
 			@include bouton-red;
 			width: fit-content;
@@ -29,6 +37,9 @@
 }
 .galerie-wrapper {
 	@include wrapper;
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
 	.galerie-items {
 		@include wrapper-items;
 		.galerie-item-title {

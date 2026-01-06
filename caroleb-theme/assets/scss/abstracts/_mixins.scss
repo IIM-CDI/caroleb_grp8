@@ -181,7 +181,7 @@
 // oeuvres
 @mixin wrapper {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	justify-items: center;
 	align-items: center;
 	margin-top: 1rem;
@@ -200,18 +200,18 @@
 // nav
 @mixin nav {
 	display: flex;
-	justify-content: center;
 	margin: 2rem;
 }
 
 @mixin nav-list {
 	display: flex;
+	flex-direction: column;
 	list-style: none;
-	gap: 2rem;
+	gap: 1rem;
 }
 
 @mixin list-a {
-	font-size: larger;
+	font-size: medium;
 	text-decoration: none;
 	color: #ffffff;
 	transition: 0.5s;

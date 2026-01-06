@@ -1,15 +1,19 @@
 @use "../abstracts" as *;
-.collection-privee {
-	// section 1
-	background-color: #fff8fa;
-}
 .collection-privee-intro {
 	@include intro;
 }
 .collection-privee-nav {
 	@include nav;
+	@media (min-width: 600px) {
+		justify-content: center;
+	}
 	.collection-privee-nav-list {
 		@include nav-list;
+		@media (min-width: 600px) {
+			flex-direction: row;
+			font-size: larger;
+			gap: 2rem;
+		}
 		.collection-privee-button {
 			@include bouton-red;
 			width: fit-content;
@@ -29,6 +33,9 @@
 }
 .collection-privee-wrapper {
 	@include wrapper;
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
 	.collection-privee-items {
 		@include wrapper-items;
 		.collection-privee-item-title {
