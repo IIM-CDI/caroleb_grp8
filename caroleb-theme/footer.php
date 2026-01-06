@@ -20,23 +20,82 @@
 
 		<div class="site-branding">
 			<?php
-			// Display custom logo if set.
-			if (has_custom_logo()):
-				the_custom_logo();
-			else:
-				$wp_b2_description = get_bloginfo('description', 'display');
-				if ($wp_b2_description || is_customize_preview()):
-					?>
-					<p class="site-description">
-						<?php echo $wp_b2_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-					</p>
-					<?php
-				endif;
+			$wp_b2_description = get_bloginfo('description', 'display');
+			if ($wp_b2_description || is_customize_preview()):
+				?>
+				<p class="site-description">
+					<?php echo $wp_b2_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				</p>
+				<?php
 			endif;
+
 			?>
 		</div><!-- .site-branding -->
 
 		<div class="site-info">
+
+			<div class="info">
+				<div class="info-perso">
+					<?php
+					$query = new WP_Query(array(
+						'post_type' => 'footer',
+						'p' => 288
+					));
+
+					if ($query->have_posts()):
+						while ($query->have_posts()):
+							$query->the_post();
+							the_content();
+
+						endwhile;
+					endif;
+
+					wp_reset_postdata();
+					?>
+				</div>
+				<div class="info-reseau">
+										<?php
+					$query = new WP_Query(array(
+						'post_type' => 'footer',
+						'p' => 300
+					));
+
+					if ($query->have_posts()):
+						while ($query->have_posts()):
+							$query->the_post();
+							the_content();
+
+						endwhile;
+					endif;
+
+					wp_reset_postdata();
+					?>
+				</div>
+				<div class="info-news">
+										<?php
+					// $query = new WP_Query(array(
+						// 'post_type' => 'footer',
+						// 'p' => 288
+					// ));
+
+					// if ($query->have_posts()):
+						// while ($query->have_posts()):
+							// $query->the_post();
+							// the_content();
+
+						// endwhile;
+					// endif;
+
+					// wp_reset_postdata();
+					?>
+				</div>
+
+			</div>
+
+
+
+
+
 			<?php
 			// Display footer navigation menu if set.
 			if (has_nav_menu('footer')):
@@ -52,11 +111,6 @@
 				);
 			endif;
 			?>
-
-			<div class="reseau">
-				<!-- img reseau + email-->
-			</div>
-
 			<p class="copyright">
 				<?php
 				printf(

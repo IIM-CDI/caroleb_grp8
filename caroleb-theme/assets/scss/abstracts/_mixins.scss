@@ -187,3 +187,10 @@
 		color: white;
 	}
 }
+
+$mobile : 768px;
+@mixin media($from) {
+  @media (width < $from) {
+    @content;
+  }
+}
