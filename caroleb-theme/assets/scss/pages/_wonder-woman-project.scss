@@ -1,24 +1,20 @@
 @use "../abstracts" as *;
-.galerie {
-	// section 1
-	background-color: #fff8fa;
-}
-.galerie-intro {
+.wonder-woman-intro {
 	@include intro;
 }
-.galerie-nav {
+.wonder-woman-nav {
 	@include nav;
 	@media (min-width: 600px) {
 		justify-content: center;
 	}
-	.galerie-nav-list {
+	.wonder-woman-nav-list {
 		@include nav-list;
 		@media (min-width: 600px) {
 			flex-direction: row;
 			font-size: larger;
 			gap: 2rem;
 		}
-		.galerie-button {
+		.wonder-woman-button {
 			@include bouton-red;
 			width: fit-content;
 			background-color: color("bouton-red");
@@ -26,35 +22,36 @@
 			&:focus {
 				background-color: inherit;
 			}
-			.galerie-a {
+			.wonder-woman-a {
 				@include list-a;
 			}
-			.galerie-a:hover {
+			.wonder-woman-a:hover {
 				@include list-a-hover;
 			}
 		}
 	}
 }
-.galerie-wrapper {
+.wonder-woman-wrapper {
 	@include wrapper;
 	@media (min-width: 768px) {
 		grid-template-columns: repeat(4, 1fr);
 	}
-	.galerie-items {
+	.wonder-woman-items {
 		@include wrapper-items;
-		.galerie-item-title {
+		.wonder-woman-item-title {
 			@include item-title;
 		}
 	}
 }
-.galerie-pagination {
+.wonder-woman-pagination {
 	@include pagination;
 	.current {
-		color: #9d1b2e !important;
 		font-size: 3rem;
 	}
 	.page-numbers {
 		text-decoration: none;
-		color: black;
 	}
+}
+.wonder-woman-p {
+	@include empty;
 }

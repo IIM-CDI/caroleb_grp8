@@ -1,23 +1,25 @@
 @use "../abstracts" as *;
-
 .media-intro {
-	margin-left: 5rem;
-	margin-top: 3rem;
-	.media-text {
-		font-size: 1.5rem;
+	@include intro;
+	.presse-title {
+		@include title;
+		font-size: 96px;
 	}
 }
-
-.media-wrapper {
+.presse-p {
+	margin-left: 13%;
+	font-size: 1.5rem;
+	margin-top: 2rem;
+}
+.presse-icons {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	grid-auto-rows: minmax(100px, auto);
 	justify-items: center;
-	margin-top: 3rem;
-
+	margin: 3rem;
+	gap: 3rem;
 	.wp-block-image {
 		img {
-			width: 10rem;
+			width: 85%;
 			filter: grayscale(100%);
 			transition: 0.5s;
 		}

@@ -4,12 +4,8 @@ get_header();
 
 <main id="main-content" class="site-main">
     <section class="galerie-intro">
-        <h1>
-            <?php the_title(); ?>
-        </h1>
-        <p class="galerie-text">
-            text
-        </p>
+        <h1> <?php the_title(); ?></h1>
+        <?php the_content() ?>
     </section>
 
     <nav class="galerie-nav">
@@ -20,10 +16,11 @@ get_header();
         ]);
 
         if ($subpages) {
-            echo '<ul class="nav-list">';
+            echo '<ul class="galerie-nav-list">';
             foreach ($subpages as $page) {
-                echo '<li class="list-individual">
-                <a class="list-a" href="' . get_permalink($page->ID) . '">' . $page->post_title . '</a>
+                echo '<button class="galerie-button">
+                    <a class="galerie-a" href="' . get_permalink($page->ID) . '">' . $page->post_title . '</a>
+                </button>
                 </li>';
             }
             echo '</ul>';
@@ -33,10 +30,10 @@ get_header();
 
     <section>
         <?php
-
         $oeuvre_query = new WP_Query(array(
             'post_type' => 'oeuvre',
             'posts_per_page' => 12,
+            'post_status' => 'publish',
             'paged' => $paged
         ));
         ?>
@@ -58,8 +55,10 @@ get_header();
                             }
                             ?>
                         </a>
+                        <p class="galerie-item-title">
+                            <?php the_title(); ?>
+                        </p>
                     </li>
-
                 <?php endwhile; ?>
             </ul>
 
@@ -71,7 +70,13 @@ get_header();
                 ?>
             </div>
 
-            <?php wp_reset_postdata(); ?>
+            <?php wp_reset_postdata();
+        elseif (!$oeuvre_query->have_posts()): ?>
+            <p>
+                <?php
+                echo 'Pas doeuvre presente';
+                ?>
+            </p>
         <?php endif; ?>
     </section>
 </main>

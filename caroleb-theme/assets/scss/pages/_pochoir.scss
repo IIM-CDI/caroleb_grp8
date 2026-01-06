@@ -1,24 +1,20 @@
 @use "../abstracts" as *;
-.galerie {
-	// section 1
-	background-color: #fff8fa;
-}
-.galerie-intro {
+.pochoirs-intro {
 	@include intro;
 }
-.galerie-nav {
+.pochoirs-nav {
 	@include nav;
 	@media (min-width: 600px) {
 		justify-content: center;
 	}
-	.galerie-nav-list {
+	.pochoirs-nav-list {
 		@include nav-list;
 		@media (min-width: 600px) {
 			flex-direction: row;
 			font-size: larger;
 			gap: 2rem;
 		}
-		.galerie-button {
+		.pochoirs-button {
 			@include bouton-red;
 			width: fit-content;
 			background-color: color("bouton-red");
@@ -26,28 +22,28 @@
 			&:focus {
 				background-color: inherit;
 			}
-			.galerie-a {
+			.pochoirs-a {
 				@include list-a;
 			}
-			.galerie-a:hover {
+			.pochoirs-a:hover {
 				@include list-a-hover;
 			}
 		}
 	}
 }
-.galerie-wrapper {
+.pochoirs-wrapper {
 	@include wrapper;
 	@media (min-width: 768px) {
 		grid-template-columns: repeat(4, 1fr);
 	}
-	.galerie-items {
+	.pochoirs-items {
 		@include wrapper-items;
-		.galerie-item-title {
+		.pochoirs-item-title {
 			@include item-title;
 		}
 	}
 }
-.galerie-pagination {
+.pochoirs-pagination {
 	@include pagination;
 	.current {
 		color: #9d1b2e !important;
@@ -57,4 +53,7 @@
 		text-decoration: none;
 		color: black;
 	}
+}
+.pochoirs-p {
+	@include empty;
 }

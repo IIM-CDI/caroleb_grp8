@@ -2,7 +2,7 @@
 // Grid
 // =============================================================================
 
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .site {
 	display: flex;
@@ -12,15 +12,11 @@
 
 .site-main {
 	flex: 1;
-	padding: spacing('xl') 0;
+	padding: spacing("xl") 0;
 
 	.container {
 		display: grid;
-		gap: spacing('xl');
-
-		@include media-breakpoint-up(md) {
-			grid-template-columns: 1fr 300px;
-		}
+		gap: spacing("xl");
 	}
 
 	&.no-sidebar .container {
