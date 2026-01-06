@@ -169,6 +169,12 @@
 	}
 }
 
+// posts
+
+@mixin title {
+	margin-left: 13%;
+	margin-top: 5%;
+}
 // intro
 
 @mixin intro {

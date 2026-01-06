@@ -1,51 +1,39 @@
 @use "../abstracts" as *;
 .home {
-	// section 1
-	background-color: #fff8fa;
-	.post1 {
-		h4 {
-			margin-left: 13%;
-			margin-top: 5%;
+	.accueil-post1 {
+		.accueil-title {
+			@include title;
+			font-size: 96px;
+		}
+		.accueil-subtitle {
+			@include title;
 			font-size: 52px;
 		}
-		h2 {
-			margin-left: 13%;
-			margin-top: 5%;
-			font-size: 96px;
-		}
-		p {
+		.accueil-text {
+			margin-left: 11%;
+			max-width: 70%;
 			font-size: 24px;
 		}
-		.has-text-align-left {
-			margin-left: 13%;
-			max-width: 60%;
-		}
-		.wp-block-buttons.is-content-justification-center {
-			display: flex;
+		.accueil-btn {
 			gap: 175px;
+			.wp-block-button__link {
+				all: unset;
+				display: block;
+				@include bouton-red2;
+			}
 		}
-		.wp-block-button__link {
-			all: unset;
-			display: block;
-			@include bouton-red2;
-		}
-	}
-	.flex {
-		display: flex;
-	}
-	.colon {
-		display: flex;
-		flex-direction: column;
 	}
 
-	.post2 {
+	.accueil-post2 {
 		margin-top: 5%;
-		.wp-block-heading {
+		.accueil-subtitle1 {
+			@include title;
+			text-align: center;
+			margin-left: 0%;
 			font-size: 96px;
-			margin-left: 15%;
 			margin-bottom: 5%;
 		}
-		.wp-block-button {
+		.accueil-btn1 {
 			margin-top: 2%;
 			margin-bottom: 2%;
 			.wp-block-button__link {
@@ -54,26 +42,23 @@
 				@include bouton-red2;
 			}
 		}
-
-		p {
-			width: 25%;
+		.accueil-text1 {
+			width: 40%;
 			margin: auto;
 			font-size: 24px;
 		}
 	}
 
-	//section 3
-	.post3 {
+	.accueil-post3 {
 		margin-top: 5%;
-		h2 {
-			margin-left: 12%;
+		.accueil-subtitle2 {
+			@include title;
 			font-size: 96px;
 		}
 		.mosaic.oeuvre {
 			width: 75%;
 			margin: 0 auto;
 		}
-
 		.mosaic {
 			display: flex;
 			gap: 40px;
@@ -96,7 +81,6 @@
 				width: 65%;
 			}
 		}
-
 		.row-small {
 			display: flex;
 			gap: 20px;
@@ -105,19 +89,17 @@
 				width: 100%;
 			}
 		}
-
 		.raw-small2 {
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
 		}
-
-		.is-layout-grid {
+		.accueil-oeuvre-content {
 			margin-left: 12.5%;
 			display: flex;
 			margin-top: 2%;
 			margin-bottom: 5%;
-			.wp-container-content-5f80b302 {
+			.accueil-oeuvre-text {
 				width: 62%;
 				font-size: 24px;
 			}
@@ -129,7 +111,7 @@
 		}
 	}
 
-	.post4 {
+	.accueil-post4 {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -140,15 +122,17 @@
 			font-size: 96px;
 		}
 		.flex-viewport {
-			height: 300px;
+			height: 200px;
 			place-content: center;
 			img {
 				border-radius: 5%;
 			}
 		}
-		p {
+		.accueil-oeuvre-text1 {
 			width: 80%;
 			font-size: 24px;
+			margin-top: 2.5rem;
+			margin-bottom: 10rem;
 		}
 	}
 }
