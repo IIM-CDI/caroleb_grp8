@@ -12,11 +12,9 @@ get_header();
         </p> -->
     </section>
 
-    <section class="contact-content">
-        <?php
-        the_content();
-        ?>
-    </section>
+    <?php
+    the_content();
+    ?>
 </main>
 
 <?php

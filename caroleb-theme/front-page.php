@@ -24,7 +24,7 @@
         <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
-            'p' => 232
+            'p' => 389
         ));
 
         if ($query->have_posts()):
@@ -44,7 +44,7 @@
         <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
-            'p' => 254
+            'p' => 391
         ));
 
         if ($query->have_posts()):
@@ -58,7 +58,7 @@
         wp_reset_postdata();
         ?>
         <?php
-        $post_id = 254;
+        $post_id = 391;
 
         $img1 = get_field('image_1', $post_id);
         $img2 = get_field('image_2', $post_id);
@@ -96,7 +96,7 @@
         <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
-            'p' => 254
+            'p' => 391
         ));
 
         if ($query->have_posts()):
@@ -114,7 +114,7 @@
         <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
-            'p' => 282
+            'p' => 394
         ));
 
         if ($query->have_posts()):
@@ -127,11 +127,11 @@
 
         wp_reset_postdata();
         ?>
-        <?php echo do_shortcode('[metaslider id="404"]'); ?>
+        <?php echo do_shortcode('[metaslider id="425"]'); ?>
         <?php
         $query = new WP_Query(array(
             'post_type' => 'post-acceuil',
-            'p' => 282
+            'p' => 394
         ));
 
         if ($query->have_posts()):
