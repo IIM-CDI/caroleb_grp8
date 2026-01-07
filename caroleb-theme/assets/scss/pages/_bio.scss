@@ -59,6 +59,8 @@
 				margin-left: 20%;
 			}
 			.wp-block-image{
+				display: flex;
+				justify-content: center;
 			img{
 				width: 70%;
 			@include media($mobile) {
