@@ -12,7 +12,6 @@ get_header();
         <?php
         $subpages = get_pages([
             'child_of' => 86,
-            'sort_column' => 'menu_order'
         ]);
 
         if ($subpages) {

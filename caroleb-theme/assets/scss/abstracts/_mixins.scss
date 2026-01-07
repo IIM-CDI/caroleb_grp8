@@ -154,6 +154,7 @@
 }
 
 @mixin bouton-red {
+	cursor: pointer;
 	border-radius: 58px;
 	border: 2px solid #9d1b2e;
 	display: flex;
@@ -248,6 +249,7 @@
 }
 
 @mixin bouton-red2 {
+	cursor: pointer;
 	color: #9d1b2e;
 	font-size: 32px;
 	border-radius: 58px;

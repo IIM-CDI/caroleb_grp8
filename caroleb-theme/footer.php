@@ -11,7 +11,7 @@
 ?>
 
 <footer id="colophon" class="site-footer">
-	<div class="container">
+	<section class="container">
 		<?php if (is_active_sidebar('footer-1')): ?>
 			<aside class="footer-widgets">
 				<?php dynamic_sidebar('footer-1'); ?>
@@ -33,8 +33,12 @@
 		</div><!-- .site-branding -->
 
 		<div class="site-info">
-
 			<div class="info">
+				<div class="footer-form">
+					<?php
+					echo do_shortcode('[mailpoet_form id="1"]');
+					?>
+				</div>
 				<div class="info-perso">
 					<?php
 					$query = new WP_Query(array(
@@ -42,6 +46,7 @@
 						'p' => 469
 					));
 
+					echo '<h4 class="footer-h4-1">Informations</h4>';
 					if ($query->have_posts()):
 						while ($query->have_posts()):
 							$query->the_post();
@@ -53,43 +58,36 @@
 					wp_reset_postdata();
 					?>
 				</div>
-				<div class="info-reseau">
+				<div>
 					<?php
-					$query = new WP_Query(array(
-						'post_type' => 'footer',
-						'p' => 470
+					$pages = get_pages(array(
+						'exclude' => array(44, 48, 46)
 					));
-
-					if ($query->have_posts()):
-						while ($query->have_posts()):
-							$query->the_post();
-							the_content();
-
-						endwhile;
-					endif;
-
-					wp_reset_postdata();
+					echo '<ul class="footer-pages-list">
+					<h4 class="footer-h4-2">Menus</h4>';
+					foreach ($pages as $page) {
+						echo '<a class="footer-a" href="' . get_permalink($page->ID) . '">' . $page->post_title . '</a>';
+					}
 					?>
 				</div>
-				<div class="info-news">
-					<?php
-					// $query = new WP_Query(array(
-					// 'post_type' => 'footer',
-					// 'p' => 288
-					// ));
-					
-					// if ($query->have_posts()):
-					// while ($query->have_posts()):
-					// $query->the_post();
-					// the_content();
-					
-					// endwhile;
-					// endif;
-					
-					// wp_reset_postdata();
-					?>
-				</div>
+			</div>
+			<div class="info-reseau">
+				<?php
+				$query = new WP_Query(array(
+					'post_type' => 'footer',
+					'p' => 470
+				));
 
+				if ($query->have_posts()):
+					while ($query->have_posts()):
+						$query->the_post();
+						the_content();
+
+					endwhile;
+				endif;
+
+				wp_reset_postdata();
+				?>
 			</div>
 
 			<?php
@@ -117,7 +115,7 @@
 				?>
 			</p>
 		</div><!-- .site-info -->
-	</div><!-- .container -->
+	</section><!-- .container -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
