@@ -39,7 +39,7 @@
 					<?php
 					$query = new WP_Query(array(
 						'post_type' => 'footer',
-						'p' => 288
+						'p' => 469
 					));
 
 					if ($query->have_posts()):
@@ -54,10 +54,10 @@
 					?>
 				</div>
 				<div class="info-reseau">
-										<?php
+					<?php
 					$query = new WP_Query(array(
 						'post_type' => 'footer',
-						'p' => 300
+						'p' => 470
 					));
 
 					if ($query->have_posts()):
@@ -72,32 +72,27 @@
 					?>
 				</div>
 				<div class="info-news">
-										<?php
+					<?php
 					// $query = new WP_Query(array(
-						// 'post_type' => 'footer',
-						// 'p' => 288
+					// 'post_type' => 'footer',
+					// 'p' => 288
 					// ));
-
+					
 					// if ($query->have_posts()):
-						// while ($query->have_posts()):
-							// $query->the_post();
-							// the_content();
-
-						// endwhile;
+					// while ($query->have_posts()):
+					// $query->the_post();
+					// the_content();
+					
+					// endwhile;
 					// endif;
-
+					
 					// wp_reset_postdata();
 					?>
 				</div>
 
 			</div>
 
-
-
-
-
 			<?php
-			// Display footer navigation menu if set.
 			if (has_nav_menu('footer')):
 				wp_nav_menu(
 					array(
