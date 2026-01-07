@@ -1,11 +1,17 @@
 @use "../abstracts" as *;
-.galerie {
-	// section 1
-	background-color: #fff8fa;
-}
 .galerie-intro {
 	@include intro;
+	.galerie-title {
+		@include title;
+		font-size: 96px;
+	}
+	.galerie-p {
+		font-size: 1.5rem;
+		margin-top: 2rem;
+		margin-left: 3rem;
+	}
 }
+
 .galerie-nav {
 	@include nav;
 	@media (min-width: 600px) {

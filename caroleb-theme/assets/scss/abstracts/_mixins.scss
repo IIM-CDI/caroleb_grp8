@@ -172,7 +172,7 @@
 // posts
 
 @mixin title {
-	margin-left: 13%;
+	margin-left: 3rem;
 	margin-top: 5%;
 }
 // intro
@@ -263,11 +263,9 @@
 	}
 }
 
-$mobile : 768px;
+$mobile: 768px;
 @mixin media($from) {
-  @media (width < $from) {
-    @content;
-  }
+	@media (width < $from) {
+		@content;
+	}
 }
-
-
