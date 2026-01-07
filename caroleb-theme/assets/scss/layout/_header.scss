@@ -1,24 +1,50 @@
+// =============================================================================
+// Header
+// =============================================================================
+
 @use "../abstracts" as *;
+
 .site-header {
 	padding: spacing("lg") 0;
 	background-color: color("primary");
 	// border-bottom: 1px solid color("border");
+
 	.container {
 		display: flex;
 		flex-direction: column;
+
 		.main-navigation {
 			display: flex;
 			justify-content: center;
+			@include media($mobile) {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+    			}
+			.primary-menu{
+					@include media($mobile) {
+						display: grid;
+						grid: auto-flow / 1fr 1fr;
+    				}
+			}
+			.menu-toggle{
+				@include media($mobile) {
+						margin-bottom: 2%;
+    				}
+			}
 		}
 	}
 }
+
 .site-branding {
 	flex: 0 0 auto;
 	display: flex;
 	justify-content: center;
+
 	.site-title {
 		margin: 0;
 		font-size: font-size("h3");
+		
 		a {
 			@include link-reset;
 			color: color("primary");
