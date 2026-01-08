@@ -163,10 +163,13 @@
 	padding: 8px 40px;
 	width: 150px;
 	height: 40px;
+	transition: transform 0.4s ease;
 	&:hover,
 	&:focus {
 		background-color: color("bouton-red");
 		color: rgb(255, 255, 255);
+		transform: scale(1.05);
+		transition: transform 0.4s ease;
 	}
 }
 
@@ -258,15 +261,18 @@
 	justify-content: center;
 	align-items: center;
 	padding: 0px 30px;
+	transition: transform 0.4s ease;
 	&:hover,
 	&:focus {
 		background-color: color("bouton-red");
 		color: white;
+		transform: scale(1.05);
+		transition: transform 0.4s ease;
 	}
 }
 
 $mobile: 768px;
-$tablette : 1100px;
+$tablette: 1100px;
 @mixin media($from) {
 	@media (width < $from) {
 		@content;

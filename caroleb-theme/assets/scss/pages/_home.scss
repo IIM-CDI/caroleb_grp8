@@ -19,6 +19,11 @@
 			margin-left: 13%;
 			margin-top: 5%;
 			font-size: 52px;
+			@keyframes fadeIn {
+				to {
+					opacity: 1;
+				}
+			}
 			@include media($mobile) {
 				font-size: 36px;
 				text-align: center;

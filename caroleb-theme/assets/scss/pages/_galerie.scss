@@ -61,9 +61,14 @@
 	}
 	.galerie-items {
 		@include wrapper-items;
+		transition: transform 0.4s ease;
 		.galerie-item-title {
 			@include item-title;
 		}
+	}
+	.galerie-items:hover {
+		transform: scale(1.05);
+		transition: transform 0.4s ease;
 	}
 }
 .galerie-pagination {
