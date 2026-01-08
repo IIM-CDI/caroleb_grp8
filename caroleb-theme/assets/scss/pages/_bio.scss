@@ -15,6 +15,15 @@
 		@include media($mobile) {
 			display: none;
 		}
+		@keyframes fadeIn {
+			to {
+				opacity: 1;
+			}
+		}
+		img {
+			opacity: 0;
+			animation: fadeIn 1.5s ease forwards;
+		}
 		.wp img {
 			width: 95%;
 		}
@@ -46,6 +55,7 @@
 	margin-top: 5%;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	@include media($mobile) {
 		display: flex;
 		flex-direction: column;
@@ -66,7 +76,7 @@
 			}
 			@include media($mobile) {
 				width: 50%;
-				margin-right: 18%;
+				margin-left: 20%;
 				margin-top: 8%;
 			}
 		}
@@ -168,9 +178,32 @@
 	margin: auto;
 	width: 80%;
 	font-size: 24px;
-	margin-bottom: 10%;
+	margin-bottom: 15%;
 	margin-top: 2%;
 	@include media($mobile) {
 		font-size: 20px;
 	}
+}
+
+// animation
+.scroll-animate {
+	opacity: 0;
+	transform: translateX(120px);
+	transition: 1s ease;
+}
+
+.scroll-animate.is-visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.scroll-animate2 {
+	opacity: 0;
+	transform: translateX(-120px);
+	transition: 1s ease;
+}
+
+.scroll-animate2.is-visible2 {
+	opacity: 1;
+	transform: translateX(0);
 }

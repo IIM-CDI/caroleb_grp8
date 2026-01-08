@@ -29,6 +29,7 @@
 
 .presse-icons {
 	margin: 3rem;
+	margin-bottom: 15%;
 	gap: 2rem;
 	@include media($mobile) {
 		grid-template-columns: repeat(3, 1fr);

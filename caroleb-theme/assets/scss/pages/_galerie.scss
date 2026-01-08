@@ -68,6 +68,7 @@
 }
 .galerie-pagination {
 	@include pagination;
+	margin-top: 5%;
 	.current {
 		color: #9d1b2e !important;
 		font-size: 3rem;
