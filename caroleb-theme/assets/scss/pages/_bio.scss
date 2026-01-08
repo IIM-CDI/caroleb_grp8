@@ -146,12 +146,19 @@
 .art.is-layout-flex {
 	height: 400px;
 	background-color: #9d1b2e;
+	flex-wrap: wrap;
 	img {
-		width: 80%;
+		width: 100%;
 	}
 	h2 {
 		color: #fff8fa;
 		font-size: 96px;
+		@include media($tablette) {
+			font-size: 76px;
+		}
+		@include media($mobile) {
+			font-size: 52px;
+		}
 		@include media($mobile) {
 			font-size: 52px;
 		}
