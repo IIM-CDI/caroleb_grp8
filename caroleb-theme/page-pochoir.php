@@ -73,7 +73,7 @@ get_header();
         elseif (!$oeuvre_query->have_posts()): ?>
             <p class="pochoirs-p">
                 <?php
-                echo 'Pas doeuvre presente';
+                echo 'Pas d\'œuvre présente';
                 ?>
             </p>
         <?php endif; ?>
