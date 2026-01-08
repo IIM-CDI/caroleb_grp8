@@ -12,10 +12,17 @@
 				font-size: 25px;
 			}
 		}
+		.oeuvre-date {
+			margin: 2rem;
+			@include media($mobile) {
+				font-size: 25px;
+				margin: 1rem;
+			}
+		}
 	}
 }
 .oeuvre-info {
-	margin: 2rem;
+	margin: 3rem;
 	margin-top: -2rem;
 	.oeuvre-dimensions {
 		margin: 1rem;

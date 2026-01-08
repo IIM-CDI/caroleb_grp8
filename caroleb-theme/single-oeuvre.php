@@ -15,7 +15,7 @@ $size = 'medium_large';
                 <h1 class="oeuvre-title"> <?php the_title() ?> </h1>
             </li>
             <li>
-                <h2 class="oeuvre-dimensions"><?= $date ?></h2>
+                <h2 class="oeuvre-date"><?= $date ?></h2>
             </li>
         </ul>
         <div class="oeuvre-info">
